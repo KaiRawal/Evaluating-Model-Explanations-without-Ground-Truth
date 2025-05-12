@@ -1,0 +1,8 @@
+[submodule "Sec4.2-BaselineComparisons-Figure6andFigure7"]
+	path = Sec4.2-BaselineComparisons-Figure6andFigure7
+	url = https://github.com/KaiRawal/AXE-OpenXAI-Submodule.git
+	branch = main
+[submodule "Sec4.1-DetectingFairwashing-Table2"]
+	path = Sec4.1-DetectingFairwashing-Table2
+	url = https://github.com/KaiRawal/AXE-FoolingLimeShap-Submodule.git
+	branch = master
