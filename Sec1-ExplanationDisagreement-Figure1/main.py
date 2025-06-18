@@ -7,8 +7,10 @@ import matplotlib.pyplot as plt
 from captum.attr import IntegratedGradients, Saliency
 import os
 from sklearn.neighbors import NearestNeighbors
-
 from lime import lime_tabular
+import matplotlib
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
 
 def download_pima_indians_dataset():
     """
