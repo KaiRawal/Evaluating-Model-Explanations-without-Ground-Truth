@@ -4,7 +4,9 @@ from sklearn.datasets import make_blobs
 import matplotlib.pyplot as plt
 from scipy.stats import multivariate_normal
 from tqdm import tqdm
-
+import matplotlib
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
 
 
 np.random.seed(1)
@@ -257,8 +259,8 @@ for nw in tqdm(perturb_widths, desc="Calculating PGI"):
 
 plt.figure(figsize=(10, 6))
 
-plt.plot(perturb_widths, pgi_x2, label=r'$e_b$', color='blue')
-plt.plot(perturb_widths, pgi_x1, label=r'$e_a$', color='red', linewidth=0.8)
+plt.plot(perturb_widths, pgi_x2, label=r'$q(e_b)$', color='blue')
+plt.plot(perturb_widths, pgi_x1, label=r'$q(e_a)$', color='red', linewidth=0.8)
 
 
 # plt.plot(perturb_widths, pgi_x2_qprobs, label=r'$e_b - qprob$', color='blue', linestyle='--', linewidth=0.5)
@@ -299,8 +301,8 @@ plt.savefig('pgi_plot.pdf', dpi=300)
 # plt.show()
 
 plt.figure(figsize=(10, 6))
-plt.plot(np.arange(1, len(df_copy_x2) + 1), df_copy_x2['label_cumsum_avg'], label=r'$e_b$', color='blue')
-plt.plot(np.arange(1, len(df_copy_x1) + 1), df_copy_x1['label_cumsum_avg'], label=r'$e_a$', color='red')
+plt.plot(np.arange(1, len(df_copy_x2) + 1), df_copy_x2['label_cumsum_avg'], label=r'$q(e_b)$', color='blue')
+plt.plot(np.arange(1, len(df_copy_x1) + 1), df_copy_x1['label_cumsum_avg'], label=r'$q(e_a)$', color='red')
 plt.xscale('symlog')
 plt.xlabel('Number of Nearest Neighbours', fontsize=27)
 plt.ylabel('AXE Explanation Quality', fontsize=23)
