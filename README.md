@@ -18,13 +18,13 @@ Surprisingly, no previous evaluation strategies satisfy all three of these basic
 
 AXE operationalises the idea that the highest quality explanation must be one that helps the user predict the model output. In accordance with the 3 foundational principles above, AXE constructs a unique KNN model per datapoint explained, using only a subset of the most important features as determined by the explanation. The accuracy of this model is used to infer the quality of the explanation.
 
-An implementation using [FAISS](https://github.com/facebookresearch/faiss) can be found in [Sec 4.2](./Sec4.2-BaselineComparisons-Figure6andFigure7). This is recommended for high throughput applications where the use-case requires efficiency.
+An implementation using [FAISS](https://github.com/facebookresearch/faiss) can be found in [Sec 4.2](https://github.com/KaiRawal/AXE-OpenXAI-Submodule). This is recommended for high throughput applications where the use-case requires efficiency.
 
-An implementation using exact KNN models from sklearn can be found in [Sec 4.1](./Sec4.1-DetectingFairwashing-Table2). This is recommended for specialised applications where the use-case requires accuracy.
+An implementation using exact KNN models from sklearn can be found in [Sec 4.1](https://github.com/KaiRawal/AXE-FoolingLimeShap-Submodule). This is recommended for specialised applications where the use-case requires accuracy.
 
 ## Repository Structure
 
-The repository contains all the code needed to replicate the experiments in the paper. The explanation disagreement example and illustrative example comparing with PGI are self contained in subdirectories [Sec1](./Sec1-ExplanationDisagreement-Figure1) and [Sec3](Sec3.2-IllustrativeAxeExample-Figure4andFigure5) respectively. The code for the fairwashing adversarial attack experiment in [Sec 4.1](./Sec4.1-DetectingFairwashing-Table2) and the comparison with OpenXAI baselines in [Sec 4.2](./Sec4.2-BaselineComparisons-Figure6andFigure7) is included as submodules.
+The repository contains all the code needed to replicate the experiments in the paper. The "explanation disagreement" example and "illustrative example comparing with PGI" are self contained in subdirectories [Sec1](./Sec1-ExplanationDisagreement-Figure1) and [Sec3](Sec3.2-IllustrativeAxeExample-Figure4andFigure5) respectively. The code for the "fairwashing adversarial attack" experiment in [Sec 4.1](https://github.com/KaiRawal/AXE-FoolingLimeShap-Submodule) and the "comparison with OpenXAI baselines" in [Sec 4.2](https://github.com/KaiRawal/AXE-OpenXAI-Submodule) built on existing repositories and is therefore included as submodules.
 
 ## Contact
 
